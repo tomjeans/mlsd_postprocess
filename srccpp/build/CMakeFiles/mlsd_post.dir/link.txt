@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++14 -fPIC -g -Wl,--no-as-needed -O3 -DNDEBUG -s -rdynamic CMakeFiles/mlsd_post.dir/src/cnpy.cc.o CMakeFiles/mlsd_post.dir/src/test.cc.o -o lib/mlsd_post  -latomic -pthread -ldl -lz 
