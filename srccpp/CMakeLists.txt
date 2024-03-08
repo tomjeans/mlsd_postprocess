@@ -29,12 +29,18 @@ include_directories(${PROJECT_SOURCE_DIR}/eigen-3.4.0)#eigen library
 
 message(STATUS ${PROJECT_SOURCE_DIR}"----the path source dir")
 
+#add xtensor library
+set(xtl_DIR /mnt/h/xtl-0.7.5/build)
+set(xtensor_DIR /mnt/h/xtensor-master/build)
+
+find_package(xtl REQUIRED)
+find_package(xtensor REQUIRED)
 
 
 
 #可执行文件
 add_executable(${PROJECT_NAME} ${DIR_SRCS})
-target_link_libraries(${PROJECT_NAME} -latomic -pthread -ldl -lz)
+target_link_libraries(${PROJECT_NAME} xtensor -latomic -pthread -ldl -lz)
 #add_library(${PROJECT_NAME} SHARED ${DIR_SRCS})
 
 
